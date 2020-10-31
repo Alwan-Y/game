@@ -3,6 +3,6 @@ import PostController from '../../controllers/PostController'
 
 const router = express.Router()
 
-router.get('/index', PostController.getIndexView)
+router.get('/game', PostController.getGameView)
 
 export default router

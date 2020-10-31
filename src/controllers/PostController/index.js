@@ -26,8 +26,8 @@ class PostController {
     return res.status(200).json({ data: filteredData })
   }
 
-  static getIndexView = (req, res) => {
-    res.render('posts/index')
+  static getGameView = (req, res) => {
+    res.render('posts/game')
   }
 
   static create = (req, res) => {
