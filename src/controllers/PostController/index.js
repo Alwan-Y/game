@@ -30,6 +30,10 @@ class PostController {
     res.render('posts/game')
   }
 
+  static getHomePageView  = (req, res) => {
+    res.render('posts/homePage')
+  }
+
   static create = (req, res) => {
     const { id } = req.body
     const post = data.find((obj) => obj.id === parseInt(id, 10))

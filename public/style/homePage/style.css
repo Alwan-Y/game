@@ -1,0 +1,791 @@
+/* initial view port iPad */
+
+/* NAV */
+.nav-item {
+    margin-right: 20px;
+}
+
+.font {
+    color: white !important;
+}
+
+.nav-bg {
+    background-color: black !important;
+    opacity: 0.7;
+}
+
+h1 h2 h3 h4 h5 h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.font p {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* END Nav */
+
+/* Jumbotron */
+.main-jumbotron {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), to(black)), url(../../img/homePage/main-bg.jpg);
+    background-image: linear-gradient(to bottom, transparent 70%, black 100%), url(../../img/homePage/main-bg.jpg);
+    background-size: cover;
+    height: 760px;
+    text-align: center;
+}
+
+.main-text {
+    color: white;
+    margin-top: 100px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0, 7);
+    font-size: 46px;
+}
+
+.main-text-2 {
+    color: white;
+    margin-top: 40px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0, 7);
+}
+
+.main-btn {
+    width: 200px;
+    margin-top: 30px;
+}
+
+.main-btn:hover {
+    width: 300px;
+    margin-top: 30px;
+}
+
+.main-p {
+    color: white;
+    margin-top: 180px;
+}
+
+.main-p:hover {
+    font-weight: bold;
+    font-size: 16pt;
+    color: white;
+    margin-top: 180px;
+}
+
+.main-i {
+    color: white;
+    margin-top: -50px;
+}
+
+/* END Jumbotron */
+
+/* Carousel */
+
+.second-jumbotron {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), to(black)), url(../../img/homePage/the-games-bg.jpg);
+    background-image: linear-gradient(to top, transparent 70%, black 100%), url(../../img/homePage/the-games-bg.jpg);
+    color: black !important;
+    height: 540px;
+    margin-top: -35px;
+}
+
+.second-h6 {
+    color: white !important;
+    font-size: 16pt;
+}
+
+.second-h1 {
+    color: white !important;
+    font-size: 32pt;
+}
+
+.cus-car {
+    margin-top: 50px !important;
+}
+
+
+
+/* END Carousel */
+
+/* Stepper */
+.third-jumbotron {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), to(black)), url(../../img/homePage/features.jpg);
+    background-image: linear-gradient(to top, transparent 70%, black 100%), url(../../img/homePage/features.jpg);
+    color: black !important;
+    height: 540px;
+    margin-top: -35px;
+}
+
+.mt-custom {
+    margin-top: 100px;
+    margin-left: 60px;
+}
+
+.mt-custom ul {
+    color: white !important;
+}
+
+.steps {
+    content: "\2022";
+    margin: 0 auto;
+    padding: 1rem 0;
+    color: orange;
+    text-transform: uppercase;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+.step {
+    display: flex;
+}
+
+.time::after {
+    content: " ";
+    right: 0;
+    top: 0;
+    position: inherit;
+    background-position-x: 10px;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: orange;
+    border-radius: 50%;
+    z-index: 4;
+    transform: translateX(50%);
+}
+
+.step-items-dates {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-context {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem 1rem 1rem;
+    position: relative;
+}
+
+.step-heading,
+.step-line {
+    line-height: 1.5rem;
+    margin-top: 5rem;
+}
+
+.step-title {
+    margin-bottom: 5px;
+}
+
+.step-heading {
+    font-size: 0.5rem;
+    margin-top: 30px;
+}
+
+.step-heading-li {
+    font-size: 0.8rem;
+}
+
+.span-heading {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.step-heading-child {
+    font-size: 0.8rem;
+}
+
+.step-line-child {
+    line-height: 1.5rem;
+}
+
+.step-context::before {
+    content: " ";
+    border-left: 2px solid white;
+    height: 100%;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+}
+
+.step-title {
+    font-size: 1rem;
+    margin-bottom: -10px;
+}
+
+.span-heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.step-heading {
+    font-size: 0.8rem;
+}
+
+.step:last-child .step-context::before {
+    height: 0;
+}
+
+.step-items-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.step-items-text,
+.step-items-dates {
+    padding: 0.5rem 0 0.5rem 0.5rem;
+}
+
+
+.step-items-text li {
+    padding: .5rem 0;
+}
+
+.main-btn-2 {
+    margin-top: 30px;
+}
+
+
+
+/* END Stepper */
+
+/* System Req Mobile */
+.fourth-jumbotron {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), to(black)), url(../../img/homePage/requirements.png);
+    background-image: linear-gradient(to top, transparent 70%, black 100%), url(../../img/homePage/requirements.png);
+    color: black !important;
+    height: 900px;
+    margin-top: -35px;
+}
+
+.fourth-pp {
+    margin-top: 100px;
+}
+
+.fourth-h1 {
+    color: white;
+}
+
+.fourth-table {
+    color: white;
+}
+
+/* End System Req Mobile */
+
+/* Top Scorer */
+.fifth-jumbotron {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(50%, rgba(0, 0, 0, 0.8)), to(black)), url(../../img/homePage/top-score-bg.png);
+    background-image: linear-gradient(black 0%, rgba(0, 0, 0, 0.8) 50%, black 100%), url(../../img/homePage/top-score-bg.png);
+    color: black !important;
+    height: 850px;
+    margin-top: -35px;
+}
+
+.cus-tops {
+    margin-top: 50px;
+}
+
+.cus-tops a {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.text-cus {
+    margin-top: 30px;
+}
+
+.col-main {
+    margin-top: 100px;
+}
+
+.ico-twitter {
+    margin-top: 16px;
+    margin-left: 26px;
+}
+
+.card-box {
+    background: #1a1b1c;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.card-img {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50%;
+    background-size: cover;
+    z-index: 10;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.card-name {
+    color: orange !important;
+    font-weight: bold !important;
+    font-size: 15pt !important;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.card-parent-caption {
+    margin-left: 30px
+}
+
+.card-caption,
+.card-datetime {
+    font-size: 8pt;
+    font-weight: 300;
+    color: grey;
+}
+
+.fo-2 {
+    margin-top: -20px;
+}
+
+.rt {
+    margin-top: -10px;
+}
+
+
+/* Footer */
+.sixth-jumbotron {
+    background-image: url(../../img/homePage/newsletter-bg.jpg);
+    background-size: cover;
+    height: 540px;
+    margin-top: -35px;
+}
+
+.foot-1 {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.foot-3 {
+    font-size: 9pt !important;
+    color: white;
+    text-align: justify;
+}
+
+.btn-mobile {
+    font-size: 0.92rem;
+    font-weight: 300;
+}
+
+.form-row {
+    margin-top: 80px;
+}
+
+.text-left {
+    margin-top: -20px;
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+
+    .font {
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0, 7);
+    }
+
+    .nav-bg {
+        background-color: transparent;
+    }
+
+    .nav-link:hover {
+        border-bottom: 3px solid black;
+        margin-top: -3px;
+    }
+
+    /* Jumbotron */
+    .main-jumbotron {
+        margin-top: -75px;
+        height: 1000px;
+    }
+
+    .main-text {
+        margin-top: 250px;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0, 7);
+        font-size: 62pt;
+    }
+
+    .main-text-2 {
+        margin-top: 50px;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0, 7);
+        font-size: 32pt;
+    }
+
+    .main-btn {
+        width: 200px;
+        margin-top: 60px;
+    }
+
+    .main-btn:hover {
+        width: 300px;
+        margin-top: 60px;
+    }
+
+    .main-p {
+        color: white;
+        margin-top: 200px;
+        font-size: 18pt;
+    }
+
+    .main-p:hover {
+        color: white;
+        margin-top: 200px;
+        font-size: 24pt;
+    }
+
+    /* END Jumbotron */
+    /* Carousel */
+    .second-jumbotron {
+        background-size: cover;
+        height: 840px;
+        margin-top: -35px;
+    }
+
+    .second-h6 {
+        color: white;
+        font-size: 18pt;
+    }
+
+    .second-h1 {
+        color: white;
+        font-size: 48pt;
+    }
+
+    .car-mar {
+        margin-top: 170px;
+    }
+
+    .car-img {
+        width: 700px !important;
+    }
+
+    /* Stepper */
+    .third-jumbotron {
+        background-size: cover;
+        height: 840px;
+        margin-top: -35px;
+    }
+
+    .mt-custom {
+        margin-top: 100px;
+        margin-left: 60px;
+    }
+
+    .mt-custom ul {
+        color: white !important;
+    }
+
+    .step {
+        display: flex;
+    }
+
+    .time::after {
+        content: " ";
+        right: 0;
+        top: 0;
+        position: inherit;
+        background-position-x: 10px;
+        width: 1.5rem;
+        height: 1.5rem;
+        background-color: orange;
+        border-radius: 50%;
+        z-index: 4;
+        transform: translateX(50%);
+    }
+
+    .step-items-dates {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .step-context {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1rem 1rem 1rem;
+        position: relative;
+    }
+
+    .step-heading {
+        font-size: 2rem;
+    }
+
+    .step-heading,
+    .step-line {
+        line-height: 1.5rem;
+        margin-top: 5rem;
+    }
+
+    .step-heading-child {
+        font-size: 1rem;
+    }
+
+    .step-heading-li {
+        font-size: 2rem;
+    }
+
+    .step-line-child {
+        line-height: 1.5rem;
+    }
+
+    .step-context::before {
+        content: " ";
+        border-left: 2px solid white;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .step-title {
+        font-size: 2rem;
+        margin-bottom: -10px;
+    }
+
+    .span-heading {
+        font-size: 6rem;
+        margin-bottom: 3rem;
+    }
+
+    .step:last-child .step-context::before {
+        height: 0;
+    }
+
+    .step-items-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .step-items-text,
+    .step-items-dates {
+        padding: 0.5rem 0 0.5rem 0.5rem;
+    }
+
+
+    .step-items-text li {
+        padding: .5rem 0;
+    }
+
+    .main-btn-2 {
+        width: 200px;
+        margin-top: 30px;
+    }
+
+    .col-steps {
+        margin-top: 50px !important;
+    }
+
+    /* System Req */
+    .fourth-jumbotron {
+        background-size: cover;
+        height: 840px;
+        margin-top: -35px;
+    }
+
+    .fourth-rw {
+        margin-top: -45px !important;
+    }
+
+    .fourth-h1 {
+        color: white !important;
+    }
+
+    .fourth-table {
+        margin-top: 50px;
+        border-color: transparent !important;
+    }
+
+    .fourth-pp {
+        margin-top: 120px;
+    }
+
+    .fourth-table tr p {
+        color: white !important;
+    }
+
+    .fourth-h5 {
+        color: rgb(211, 140, 8) !important;
+    }
+
+    .cus-tops a {
+        width: 50%;
+        margin-top: 30px;
+    }
+
+    /* Top Scorer */
+    .fifth-jumbotron {
+        background-size: cover;
+        height: 840px;
+        margin-top: -35px;
+    }
+
+    .text-scores-title {
+        font-size: 48pt;
+        letter-spacing: 1.15pt;
+        margin-top: 20px;
+    }
+
+    .text-scores-desc {
+        font-size: 12pt;
+        font-weight: 400;
+        word-spacing: 2pt;
+        letter-spacing: 1.15pt;
+    }
+
+    .card-custom {
+        background-color: #1A1B1C;
+        border-radius: 145px;
+    }
+
+    .card-img {
+        margin-left: 40%;
+        margin-top: 20%;
+        position: relative;
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50%;
+        background-size: cover;
+        z-index: 10;
+    }
+
+    .card-img-wrapper::before {
+        content: " ";
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-color: #F9B447;
+        border-radius: 50%;
+        position: absolute;
+        left: 15px;
+        top: 12px;
+    }
+
+    .card-icon {
+        margin-top: 20px;
+    }
+
+    .ico-twitter {
+        margin-left: 30px;
+    }
+
+    .card-name {
+        color: orange !important;
+        font-weight: bold !important;
+        font-size: 14pt !important;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    .card-name.card-title::after {
+        font-size: 10pt !important;
+        font-weight: 300;
+        word-spacing: 1.15pt;
+        margin-top: -10px;
+    }
+
+    .card-parent-caption {
+        margin-left: -26px;
+    }
+
+    .card-caption {
+        font-size: 10pt;
+        font-weight: 400;
+        margin-left: 50px;
+        margin-bottom: 0px;
+    }
+
+    .card-datetime {
+        font-size: 9pt;
+        font-weight: lighter;
+        margin-left: 50px;
+        color: grey;
+    }
+
+    .card-box {
+        width: 500px;
+        height: auto;
+        background-color: #1A1B1C;
+        border-radius: 8px 8px;
+    }
+
+    .ml-custom {
+        margin-left: 20%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .col-main {
+        margin-top: 70px;
+    }
+
+    .btn-score {
+        margin-top: 16px;
+        width: 100px !important;
+    }
+
+    .card-box {
+        width: 400px;
+    }
+
+    .cus-tops {
+        display: flex;
+        align-items: center;
+    }
+
+    .ml-cus-2 {
+        margin-left: 50px;
+    }
+
+    .fo-2 {
+        margin-top: 0px;
+    }
+
+    .rt {
+        margin-top: 10px;
+    }
+
+    /* Footer */
+    .sixth-jumbotron {
+        background-size: cover;
+        height: 300px;
+        margin-top: -35px;
+    }
+
+    .sixth-p {
+        color: white !important;
+        font-size: 16pt;
+    }
+
+    .p-six {
+        color: white !important;
+    }
+
+    .mar-p {
+        margin-right: 20px;
+    }
+
+    .foot-1 {
+        color: white !important;
+    }
+
+    .sv-img {
+        margin-right: 30px;
+    }
+
+    .sv-txt {
+        margin-right: 30px;
+    }
+
+    .form-row {
+        margin-top: 40px;
+    }
+
+    .text-left {
+        margin-top: 0px;
+    }
+
+}

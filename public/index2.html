@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge 3</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/homePage/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Nav Bar -->
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark nav-bg fixed-top">
+            <div class="container nav-bg-2">
+                <a class="navbar-brand" href="#home">LOGO</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto text-uppercase">
+                        <li class="nav-item">
+                            <a class="nav-link font" href="#games">Games</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font" href="#features">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font" href="#system-req">Requirement</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font" href="#top-score">Score</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font" href="#footer">Contact</a>
+                        </li>
+                    </ul>
+                    <a href="#" class="nav-link font text-uppercase">sign in</a>
+                    <a href="#" class="nav-link font text-uppercase">sign up</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- End Nav Bar -->
+    <!-- Jumbotron -->
+    <main>
+        <article>
+            <div class="jumbotron jumbotron-fluid main-jumbotron " id="home">
+                <div class="container">
+                    <h1 class="display-4 main-text text-uppercase">Play Traditional Game</h1>
+                    <h4 class="lead main-text-2">Experience new traditional game play</h4>
+                    <a href="#home" class="btn btn-warning main-btn text-uppercase font-weight-bold">Play Now</a>
+                    <p class="main-p text-uppercase">The Story</p>
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-caret-down main-i"
+                        fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M3.204 5L8 10.481 12.796 5H3.204zm-.753.659l4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z" />
+                    </svg>
+                </div>
+            </div>
+        </article>
+        <!-- END Jumbotron -->
+        <!-- Carousel -->
+        <article>
+            <div class="jumbotron jumbotron-fluid second-jumbotron" id="games">
+                <div class="container cus-car">
+                    <div class="row car-mar">
+                        <div class="col-sm">
+                            <h6 class="second-h6 ">What's so special?</h6>
+                            <h1 class="text-uppercase second-h1">The Games</h1>
+                        </div>
+                        <div class="col-sm ">
+                            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="img/homePage/rockpaperstrategy-1600.jpg" class="d-block w-100 car-img"
+                                            alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/homePage/rockpaperstrategy-1600.jpg" class="d-block w-100 car-img"
+                                            alt="...">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="img/homePage/rockpaperstrategy-1600.jpg" class="d-block w-100 car-img"
+                                            alt="...">
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                                    data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                                    data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- END Carousel -->
+        <!-- START Stepper -->
+        <article>
+            <div class="jumbotron third-jumbotron" id="features">
+                <div class="container">
+                    <div class="row col-steps">
+                        <div class="col-sm"></div>
+                        <div class="col-sm mt-custom">
+                            <p class="step-title font">What's so special?</p>
+                            <span class="display-3 span-heading text-uppercase font">features</span>
+                            <li class="steps step-heading step-context step-line">Traditional Games</li>
+                            <ul class="step-heading-child step-context steps-items-text step-line-child">If you miss
+                                your
+                                child
+                                hood, we provide many Traditional games here.
+                            </ul>
+                            <li class="steps step-heading-li circle">Game suit</li>
+                            <li class="steps step-heading-li circle">tbd</li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <!-- END Stepper-->
+        <!-- START System Req -->
+        <article>
+            <div class="jumbotron jumbotron-fluid fourth-jumbotron" id="system-req">
+                <div class="container">
+                    <p class="text-center text-white fourth-pp">Can My Computer Run this game?</p>
+                    <div class="row fourth-rw">
+                        <div class="col">
+                            <h1 class="text-uppercase fourth-h1">system <br> requirements</h1>
+                            <table class="table table-bordered border fourth-table">
+                                <tr>
+                                    <td>
+                                        <h5 class="fourth-h5">OS</h5>
+                                        <p>Windows 7 64-bit only <br> (No OSX Support at this time)</p>
+                                    </td>
+                                    <td>
+                                        <h5 class="fourth-h5">PROCESSOR</h5>
+                                        <p>Intel Core 2 Duo @ 2.4 GHZ or <br> AMD Athlon X2 @ 2.8 GHZ</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5 class="fourth-h5">MEMORY</h5>
+                                        <p>4 GB RAM</p>
+                                    </td>
+                                    <td>
+                                        <h5 class="fourth-h5">STORAGE</h5>
+                                        <p>8 GB Available Space</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <h5 class="fourth-h5">GRAPHICS</h5>
+                                        <p>NVIDIA GeForce GTX 660 2GB or <br> AMD Radeon HD 7850 2GB DirectX11 (Shader
+                                            Model
+                                            5)
+                                        </p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col">
+                        </div>
+                    </div>
+                    </table>
+                </div>
+            </div>
+        </article>
+        <!-- END System Req -->
+        <!-- START Top Score -->
+        <article>
+            <div class="jumbotron jumbotron-fluid fifth-jumbotron" id="top-score">
+                <div class=" container">
+                    <div class="row">
+                        <div class="col-sm cus-tops ">
+                            <div class="center-text ">
+                                <h1 class="text-uppercase font text-scores-title text-light">top scores</h1>
+                                <div class="div text-cus">
+                                    <h5 class="font text-scores-desc mt-3">This top score from various games
+                                        provided on
+                                        this
+                                        platform
+                                    </h5>
+                                </div>
+                                <a href="" class="btn btn-warning main-btn-2"> see more </a>
+                            </div>
+                        </div>
+                        <div class="col-sm col-main">
+                            <div class="card-box ml-custom">
+                                <div class="row">
+                                    <div class="col-3"><img src="img/homePage/poto1.jpg" alt="#" class="card-img">
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="card-name">Evan Lahti</p>
+                                        <div class="fo-2">
+                                            <p class="card-title font">PC Gamer</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 card-icon">
+                                        <svg class="ico-twitter" width="19" height="15" viewBox="0 0 19 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path opacity="0.3"
+                                                d="M18.3981 2.41449C17.7231 2.70013 17.0072 2.88765 16.2741 2.97084C17.0365 2.53297 17.623 1.84099 17.899 1.01526C17.1731 1.42694 16.3789 1.71699 15.5508 1.87286C14.8519 1.15947 13.8744 0.755389 12.8519 0.757085C10.8105 0.757085 9.15361 2.33909 9.15361 4.29061C9.15361 4.5679 9.18627 4.83816 9.25021 5.09623C6.17639 4.94862 3.45216 3.54236 1.62787 1.404C1.30934 1.92529 1.12764 2.53297 1.12764 3.18076C1.12764 4.40623 1.78024 5.48805 2.77231 6.12188C2.18494 6.10468 1.61046 5.95309 1.09706 5.67983V5.7249C1.09706 7.43659 2.37189 8.86495 4.06278 9.19027C3.5182 9.3312 2.94722 9.35187 2.39305 9.25072C2.86384 10.6549 4.22998 11.6764 5.8475 11.7061C4.5821 12.6524 2.98781 13.2184 1.25483 13.2184C0.960153 13.2181 0.66574 13.2015 0.373047 13.1689C2.00943 14.1713 3.95365 14.7571 6.04185 14.7571C12.8438 14.7571 16.5627 9.37118 16.5627 4.70056C16.5627 4.54779 16.5627 4.39502 16.5513 4.24335C17.2749 3.74295 17.8998 3.12372 18.3969 2.41449H18.3981Z"
+                                                fill="white" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="card-parent-caption">
+                                    <div class="row">
+                                        <p class="card-caption font">
+                                            "One of my gaming hightlights of the year."</p>
+                                    </div>
+                                    <div class="row rt">
+                                        <p class="card-datetime">October 18, 2018</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-box ml-cus-2">
+                                <div class="row">
+                                    <div class="col-3"><img src="img/homePage/poto2.jpg" alt="#" class="card-img">
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="card-name">Jada Griffin</p>
+                                        <div class="fo-2">
+                                            <p class="card-title font">Nerd reactor</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 card-icon">
+                                        <svg class="ico-twitter" width="19" height="15" viewBox="0 0 19 15" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path opacity="0.3"
+                                                d="M18.3981 2.41449C17.7231 2.70013 17.0072 2.88765 16.2741 2.97084C17.0365 2.53297 17.623 1.84099 17.899 1.01526C17.1731 1.42694 16.3789 1.71699 15.5508 1.87286C14.8519 1.15947 13.8744 0.755389 12.8519 0.757085C10.8105 0.757085 9.15361 2.33909 9.15361 4.29061C9.15361 4.5679 9.18627 4.83816 9.25021 5.09623C6.17639 4.94862 3.45216 3.54236 1.62787 1.404C1.30934 1.92529 1.12764 2.53297 1.12764 3.18076C1.12764 4.40623 1.78024 5.48805 2.77231 6.12188C2.18494 6.10468 1.61046 5.95309 1.09706 5.67983V5.7249C1.09706 7.43659 2.37189 8.86495 4.06278 9.19027C3.5182 9.3312 2.94722 9.35187 2.39305 9.25072C2.86384 10.6549 4.22998 11.6764 5.8475 11.7061C4.5821 12.6524 2.98781 13.2184 1.25483 13.2184C0.960153 13.2181 0.66574 13.2015 0.373047 13.1689C2.00943 14.1713 3.95365 14.7571 6.04185 14.7571C12.8438 14.7571 16.5627 9.37118 16.5627 4.70056C16.5627 4.54779 16.5627 4.39502 16.5513 4.24335C17.2749 3.74295 17.8998 3.12372 18.3969 2.41449H18.3981Z"
+                                                fill="white" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="card-parent-caption">
+                                    <div class="row">
+                                        <p class="card-caption font">
+                                            "The next big thing in the world of streaming and survival games."</p>
+                                    </div>
+                                    <div class="row rt">
+                                        <p class="card-datetime">December 18, 2018</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-box ml-custom">
+                                <div class="row">
+                                    <div class="col-3"><img src="img/homePage/poto3.jpg" alt="#" class="card-img">
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="card-name">Aaron Williams</p>
+                                        <div class="fo-2">
+                                            <p class="card-title font">Uproxx</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 card-icon">
+                                        <img class="ico-twitter" src="img/homePage/twitter.svg" alt="#">
+                                    </div>
+                                </div>
+                                <div class="card-parent-caption">
+                                    <div class="row">
+                                        <p class="card-caption font">
+                                            "Snoop Dogg Playing The Wildly Entertaining 'SOS' Is Ridiculous."</p>
+                                    </div>
+                                    <div class="row rt">
+                                        <p class="card-datetime">December 24, 2018</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+    <!-- END Top score -->
+    <!-- Footer -->
+    <footer>
+        <div class="jumbotron jumbotron-fluid d-flex align-items-center sixth-jumbotron" id="footer">
+            <div class="container">
+                <div class="row d-flex">
+                    <div class="col text-left">
+                        <h3 class="foot-1">Want to stay in touch?</h3>
+                        <h1 class="foot-1 font-weight-bold">Newsletter Subscribe</h1>
+                        <p class="foot-3">In case to start receiving our news, all you have to do is enter your
+                            email
+                            address. Everything else will be taken care of you. We will send you emails containing
+                            information about game. We don't spam.
+                        </p>
+                    </div>
+                    <div class="col align-items-center">
+                        <div class="mt-3">
+                            <form class="form-row">
+                                <div class="form-group col-md-7">
+                                    <label class="sr-only foot-1" for="email">email</label>
+                                    <input type="text" class="form-control mb-2 mr-sm-2 pt-3 bg-dark" id="email"
+                                        placeholder="youremail@binar.co.id" />
+                                </div>
+                                <div class="col-md-5 text-left">
+                                    <button class="btn btn-warning mb-3 w-100 btn-mobile" href>
+                                        Subscribe Now
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col my-2 text-right">
+                        <a class="sv-img" href="https://www.twitch.tv/">
+                            <svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M19.9602 13.6252V9.5538V0.680176H2.93894L0.811279 2.97688V15.0868H6.13043V18.845H8.47085L11.024 16.1307H17.407L19.9602 13.6252ZM7.40694 13.4165H4.00268C3.76864 13.4165 3.57715 13.2286 3.57715 12.9989V2.76817C3.57715 2.5385 3.76864 2.35059 4.00268 2.35059H17.6197C17.8537 2.35059 18.0452 2.5385 18.0452 2.76817V10.7022C18.0452 10.8171 18.0027 10.9215 17.9229 10.9998L15.5825 13.2965C15.5027 13.3748 15.391 13.4165 15.2793 13.4165H11.3697L8.07183 15.6401C8.00268 15.6871 7.91757 15.7132 7.83247 15.7132C7.76332 15.7132 7.69949 15.6976 7.63566 15.6662C7.49204 15.5932 7.40694 15.4522 7.40694 15.2956V13.4165Z"
+                                    fill="white" />
+                                <path
+                                    d="M13.79 9.76274V5.58691H12.0878V9.76274H13.79ZM9.53465 9.76274V5.58691H7.83252V9.76274H9.53465Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                        <a class="sv-img" href="https://twitter.com/">
+                            <svg width="19" height="15" viewBox="0 0 19 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.3"
+                                    d="M18.3981 2.41449C17.7231 2.70013 17.0072 2.88765 16.2741 2.97084C17.0365 2.53297 17.623 1.84099 17.899 1.01526C17.1731 1.42694 16.3789 1.71699 15.5508 1.87286C14.8519 1.15947 13.8744 0.755389 12.8519 0.757085C10.8105 0.757085 9.15361 2.33909 9.15361 4.29061C9.15361 4.5679 9.18627 4.83816 9.25021 5.09623C6.17639 4.94862 3.45216 3.54236 1.62787 1.404C1.30934 1.92529 1.12764 2.53297 1.12764 3.18076C1.12764 4.40623 1.78024 5.48805 2.77231 6.12188C2.18494 6.10468 1.61046 5.95309 1.09706 5.67983V5.7249C1.09706 7.43659 2.37189 8.86495 4.06278 9.19027C3.5182 9.3312 2.94722 9.35187 2.39305 9.25072C2.86384 10.6549 4.22998 11.6764 5.8475 11.7061C4.5821 12.6524 2.98781 13.2184 1.25483 13.2184C0.960153 13.2181 0.66574 13.2015 0.373047 13.1689C2.00943 14.1713 3.95365 14.7571 6.04185 14.7571C12.8438 14.7571 16.5627 9.37118 16.5627 4.70056C16.5627 4.54779 16.5627 4.39502 16.5513 4.24335C17.2749 3.74295 17.8998 3.12372 18.3969 2.41449H18.3981Z"
+                                    fill="white" />
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/?gl=ID">
+                            <svg width="26" height="19" viewBox="0 0 26 19" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.61 0.183594H5.98961C3.12627 0.183594 0.799805 2.55085 0.799805 5.4644V12.8973C0.799805 15.8163 3.12627 18.1781 5.98961 18.1781H20.6046C23.4733 18.1781 25.7944 15.8108 25.7944 12.8973V5.4644C25.7998 2.55085 23.4733 0.183594 20.61 0.183594ZM17.0959 9.54779L10.2575 12.8642C10.0731 12.9524 9.86705 12.82 9.86705 12.6103V5.7679C9.86705 5.55821 10.084 5.42578 10.2629 5.51958L17.1013 9.04564C17.3074 9.15048 17.302 9.44846 17.0959 9.54779Z"
+                                    fill="#FF1313" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="row content-justify-end footer mt-3">
+                    <div class="col-lg-4">
+                        <div class="d-inline text-left">
+                            <p class="foot-1 foot-3">&copy 2020 Your Games, inc. All Rights Reserved</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 offset-lg-2 mb-2">
+                        <div class="d-inline text-right">
+                            <a class="foot-1 foot-3 sv-txt" href="#">Privacy Policy</a>
+                            <a class="foot-1 foot-3 sv-txt" href="#">Terms of Services</a>
+                            <a class="foot-1 foot-3" href="#">Code of Conduct</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+
+    <!-- End of Navigation -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
