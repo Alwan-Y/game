@@ -156,9 +156,6 @@ class Game {
     }
 
     sendHistory = () => {
-        console.log(this.playerChoice)
-        console.log(this.compChoice)
-        console.log(this.startResult)
         const xhr = new XMLHttpRequest();
         xhr.open("POST", "http://localhost:5001/apis/posts");
         xhr.setRequestHeader("Content-Type", "application/json");
@@ -205,12 +202,27 @@ class Game {
         }
         
         xhr.onerror = function() {
-            allert('Internal server error')
+            alert('Internal server error')
         }
         
         xhr.open("GET", "http://localhost:5001/apis/posts");
         xhr.send();
     };
+
+    removeHistory = (historyId) => {
+        const xhr = new XMLHttpRequest();
+        
+        xhr.onload = function() {
+            game.getHistory()
+        }
+        
+        xhr.onerror = function() {
+            alert('Internal server error')
+        }
+        
+        xhr.open("DELETE", `http://localhost:5001/apis/posts/${historyId}`);
+        xhr.send();
+    }
 
     renderAllHistory = (history) => {
         const listHistoryElement = document.querySelector("#listHistory");
@@ -236,7 +248,8 @@ class Game {
         const btnDelete = document.querySelectorAll('.button-delete')
         btnDelete.forEach((del) => {
             del.addEventListener('click', (event) => {
-                console.log(event.target.id)
+                const historyId = event.target.id
+                this.removeHistory(historyId)
             })
         })
     }

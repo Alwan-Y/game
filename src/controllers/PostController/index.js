@@ -60,21 +60,18 @@ class PostController {
 
   static delete = (req, res) => {
     const { id } = req.params
-    const post = data.find((obj) => obj.id === parseInt(id, 10))
+    console.log(id)
+    const post = data.find((obj) => obj.id)
 
     if (!post) {
       return res.status(404).json({ message: '404! Id is not exist.' })
     }
 
-    // Alternative 1
     for (let i = 0; i < data.length; i += 1) {
-      if (data[i].id === parseInt(id, 10)) {
+      if (data[i].id == id) {
         data.splice(i, 1)
       }
     }
-
-    // Alternative 2
-    // data.splice(data.indexOf(post), 1)
 
     return fs.writeFile(
       filePath,
