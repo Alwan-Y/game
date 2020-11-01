@@ -231,12 +231,20 @@ class Game {
             </div>
             `;
         });
+
+        const btnDelete = document.querySelectorAll('.button-delete')
+        btnDelete.forEach((del) => {
+            del.addEventListener('click', () => {
+                console.log('click Delete')
+            })
+        })
     }
 }
 
 const player = new PlayerHuman('jhon')
 const comp = new Comp('computer')
 const game = new Game(player,comp)
+game.getHistory()
 
 const playerChoice = document.querySelectorAll('.player')
 playerChoice.forEach((choice) => {
@@ -245,10 +253,13 @@ playerChoice.forEach((choice) => {
     })
 })
 
-this.refresh = document.querySelector('.refresh')
+const refresh = document.querySelector('.refresh')
 refresh.addEventListener('click', () => {
     game.sendHistory()
     game.refresh()
     game.getHistory()
 })
+
+
+
 
