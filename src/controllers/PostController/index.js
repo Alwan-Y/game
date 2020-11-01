@@ -5,6 +5,14 @@ import data from '../../data/data.json'
 const filePath = path.resolve(__dirname, '../../data/data.json')
 
 class PostController {
+  static getGameView = (req, res) => {
+    res.render('posts/game')
+  }
+
+  static getHomePageView  = (req, res) => {
+    res.render('posts/homePage')
+  }
+
   static get = (req, res) => {
     let filteredData = data
     const { title, sort } = req.query
@@ -26,20 +34,9 @@ class PostController {
     return res.status(200).json({ data: filteredData })
   }
 
-  static getGameView = (req, res) => {
-    res.render('posts/game')
-  }
-
-  static getHomePageView  = (req, res) => {
-    res.render('posts/homePage')
-  }
-
   static create = (req, res) => {
-    const { id } = req.body
-    const post = data.find((obj) => obj.id === parseInt(id, 10))
-
-    if (post) {
-      return res.status(400).json({ message: 'id is already exist' })
+    if(req.body.playerChoice == null && req.body.compChoice == null && req.body.result == null) {
+      return res.status(401).send({ error: true, message: 'Field missing in request body.' })
     }
 
     data.push(req.body)
@@ -49,34 +46,6 @@ class PostController {
       JSON.stringify(data),
       'utf-8',
       () => res.status(201).json({ message: `Successfully saved on ${filePath}` }),
-    )
-  }
-
-  static update = (req, res) => {
-    const { id } = req.params
-    const post = data.find((obj) => obj.id === parseInt(id, 10))
-
-    if (!post) {
-      return res.status(404).json({ message: 'Not Found' })
-    }
-
-    // Alternative 1
-    const { title, author } = req.body
-    post.title = title || post.title
-    post.author = author || post.author
-
-    // Alternative 2
-    // Object.keys(req.body).forEach((key) => {
-    //   if (req.body[key]) {
-    //     post[key] = req.body[key]
-    //   }
-    // })
-
-    return fs.writeFile(
-      filePath,
-      JSON.stringify(data),
-      'utf-8',
-      () => res.status(200).json({ success: true, message: 'data updated', data: req.body }),
     )
   }
 

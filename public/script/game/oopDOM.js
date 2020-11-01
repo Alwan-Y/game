@@ -13,10 +13,12 @@ class PlayerHuman extends Player {
     }
 
     playerChoice = (choice) => {
-        console.log(game.startResult)
         if (game.startResult === null) {
             const playerChoice = choice.classList[1]
             const computerChoice = comp.getComputerChoice()
+            
+            game.setPlayerChoice(playerChoice)
+            game.setCompChoice(computerChoice)
             game.getResult(playerChoice, computerChoice)
             choice.style.backgroundColor = '#d8d8d8'
             choice.style.padding = '5px'
@@ -68,6 +70,8 @@ class Game {
         this.startResult = null
         this.reset = ''
         this.changeComputerValue = ''
+        this.playerChoice = ''
+        this.compChoice = ''
 
     this.resultDisplay = document.getElementById('gameResult')
     this.computerChoice = document.querySelectorAll('.computer')
@@ -76,6 +80,8 @@ class Game {
     this.compScis = document.querySelector('.compScissor')
     }
 
+    setPlayerChoice = (playerChoice) => this.playerChoice = playerChoice
+    setCompChoice = (compChoice) => this.compChoice = compChoice
     setStartResult = (result) => this.startResult = result
 
     getResult = (player, computer) => {
@@ -149,10 +155,31 @@ class Game {
         }
     }
 
+    sendHistory = () => {
+        console.log(this.playerChoice)
+        console.log(this.compChoice)
+        console.log(this.startResult)
+        const xhr = new XMLHttpRequest();
+        xhr.open("POST", "http://localhost:5001/apis/posts");
+        xhr.setRequestHeader("Content-Type", "application/json");
+        const result = {
+            playerChoice: this.playerChoice,
+            computerChoice: this.compChoice,
+            result: this.startResult
+        }
+        xhr.send(JSON.stringify(result));
+    }
+
     refresh = () => {
         this.reset.style.backgroundColor = '#9b835f'
         this.reset.style.padding = '0px'
+
+        const playerChoice = null
+        const computerChoice = null
         const startResult = null
+
+        this.setPlayerChoice(playerChoice)
+        this.setCompChoice(computerChoice)
         if (this.changeComputerValue == 'rock') {
             this.compRock.classList.remove('mix')
         } else if (this.changeComputerValue == 'paper') {
@@ -165,6 +192,44 @@ class Game {
         this.endResult(startResult)
     }
 
+    getHistory = () => {
+        const xhr = new XMLHttpRequest();
+                
+        xhr.onload = function() {
+            const responseJson = JSON.parse(this.responseText);
+            if(responseJson.error) {
+                console.log(responseJson.message);
+            } else {
+                game.renderAllHistory(responseJson.data)
+            }
+        }
+        
+        xhr.onerror = function() {
+            allert('Internal server error')
+        }
+        
+        xhr.open("GET", "http://localhost:5001/apis/posts");
+        xhr.send();
+    };
+
+    renderAllHistory = (history) => {
+        const listHistoryElement = document.querySelector("#listHistory");
+        listHistoryElement.innerHTML = "";
+    
+        history.forEach(history => {
+            listHistoryElement.innerHTML += `
+                <div class="col-lg-4 col-md-6 col-sm-12" style="margin-top: 12px;">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5>${history.playerChoice}</h5>
+                            <p>${history.computerChoice}</p>
+                            <p>${history.result}</p>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+    }
 }
 
 const player = new PlayerHuman('jhon')
@@ -180,5 +245,9 @@ playerChoice.forEach((choice) => {
 
 this.refresh = document.querySelector('.refresh')
 refresh.addEventListener('click', () => {
+    game.sendHistory()
     game.refresh()
+    game.getHistory()
 })
+
+{/* <button type="button" class="btn btn-danger button-delete" id="${book.id}">Hapus</button> */}

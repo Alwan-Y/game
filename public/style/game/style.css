@@ -54,6 +54,10 @@ img {
     padding: 5px;
 }
 
+#listHistory {
+    margin-top: 100px;
+}
+
 
 /* Dekstop */
 @media (min-width: 992px) {
@@ -129,5 +133,9 @@ img {
 
     .mar-aut {
         margin: auto;
+    }
+
+    #listHistory {
+        margin-top: 200px;
     }
 }
