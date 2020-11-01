@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import data from '../../data/data.json'
+import uniqid from 'uniqid'
 
 const filePath = path.resolve(__dirname, '../../data/data.json')
 
@@ -39,7 +40,15 @@ class PostController {
       return res.status(401).send({ error: true, message: 'Field missing in request body.' })
     }
 
-    data.push(req.body)
+    const { playerChoice, computerChoice, result } = req.body
+    const historyData = {
+      id: uniqid(),
+      playerChoice,
+      computerChoice,
+      result
+    }
+
+    data.push(historyData)
 
     return fs.writeFile(
       filePath,

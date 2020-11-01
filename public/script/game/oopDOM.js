@@ -223,9 +223,10 @@ class Game {
                     <div class="card-body">
                         <h5 class="text-center text-uppercase" style="color: #f9b23e;">player choice = ${history.playerChoice}</h5>
                         <h5 class="text-center text-uppercase" style="color: #f9b23e;"> computer choice = ${history.computerChoice}</h5>
-                        <h4 class="text-center mt-3 text-uppercase" style="color: #f9b23e;"> result = ${history.result}</h4>
-                        <p class="text-center mt-3"><button type="button" class="btn btn-danger button-delete"
-                        id="">Hapus</button></p> 
+                        <p style="font-size: -100pt; color: #724C21" >${history.id}</p>
+                        <h4 class="text-center text-uppercase" style="color: #f9b23e;"> result = ${history.result}</h4>
+                        <p class="text-center mt-3"><button id="${history.id}" type="button" class="btn btn-danger button-delete"
+                        id="">Hapus</button></p>
                     </div>
                 </div>
             </div>
@@ -234,8 +235,8 @@ class Game {
 
         const btnDelete = document.querySelectorAll('.button-delete')
         btnDelete.forEach((del) => {
-            del.addEventListener('click', () => {
-                console.log('click Delete')
+            del.addEventListener('click', (event) => {
+                console.log(event.target.id)
             })
         })
     }

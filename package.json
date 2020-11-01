@@ -14,7 +14,8 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "uniqid": "^5.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.12.1",
