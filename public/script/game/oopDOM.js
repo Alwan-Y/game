@@ -218,15 +218,17 @@ class Game {
     
         history.forEach(history => {
             listHistoryElement.innerHTML += `
-                <div class="col-lg-4 col-md-6 col-sm-12" style="margin-top: 12px;">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5>${history.playerChoice}</h5>
-                            <p>${history.computerChoice}</p>
-                            <p>${history.result}</p>
-                        </div>
+            <div class="col-lg-4 col-md-6 col-sm-12" style="margin-top: 12px; ">
+                <div class="card" style="background-color:#724C21; border-radius: 20px; ">
+                    <div class="card-body">
+                        <h5 class="text-center text-uppercase" style="color: #f9b23e;">player choice = ${history.playerChoice}</h5>
+                        <h5 class="text-center text-uppercase" style="color: #f9b23e;"> computer choice = ${history.computerChoice}</h5>
+                        <h4 class="text-center mt-3 text-uppercase" style="color: #f9b23e;"> result = ${history.result}</h4>
+                        <p class="text-center mt-3"><button type="button" class="btn btn-danger button-delete"
+                        id="">Hapus</button></p> 
                     </div>
                 </div>
+            </div>
             `;
         });
     }
@@ -250,4 +252,3 @@ refresh.addEventListener('click', () => {
     game.getHistory()
 })
 
-{/* <button type="button" class="btn btn-danger button-delete" id="${book.id}">Hapus</button> */}
