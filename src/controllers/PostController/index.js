@@ -14,23 +14,18 @@ class PostController {
     res.render('posts/homePage')
   }
 
+  static getCompChoice = (req, res) => {
+    let compChoice = ''
+    const choice = Math.random();
+    if (choice <= 1 / 3) compChoice = 'rock';
+    if (choice > 1 / 3 && choice <= 2 / 3) compChoice = 'paper';
+    if (choice > 2 / 3) compChoice = 'scissor';
+
+    res.send(compChoice)
+  }
+
   static get = (req, res) => {
     let filteredData = data
-    const { title, sort } = req.query
-
-    // Sort
-    if (sort) {
-      filteredData.sort((a, b) => parseInt(a.id, 10) - parseInt(b.id, 10))
-
-      if (sort === 'desc') {
-        filteredData.reverse()
-      }
-    }
-
-    // Search by title
-    if (title) {
-      filteredData = filteredData.filter((elm) => elm.title.toLowerCase().includes(title))
-    }
 
     return res.status(200).json({ data: filteredData })
   }
@@ -60,7 +55,6 @@ class PostController {
 
   static delete = (req, res) => {
     const { id } = req.params
-    console.log(id)
     const post = data.find((obj) => obj.id)
 
     if (!post) {

@@ -15,7 +15,7 @@ class PlayerHuman extends Player {
     playerChoice = (choice) => {
         if (game.startResult === null) {
             const playerChoice = choice.classList[1]
-            const computerChoice = comp.getComputerChoice()
+            const computerChoice = comp.getComputerCC()
             
             game.setPlayerChoice(playerChoice)
             game.setCompChoice(computerChoice)
@@ -52,14 +52,35 @@ class PlayerHuman extends Player {
 class Comp extends Player {
     constructor() {
         super()
+        this.computerChoice = ''
     }
 
-    getComputerChoice = () => {
-        const computer = Math.random()
+    setComputerChoice = (choice) => {
+        this.computerChoice = choice
+    }
+    getComputerCC = () => {
+        return this.computerChoice
+    }
+    // getComputerChoice = () => {
+    //     const computer = Math.random()
     
-        if (computer < 0.34) return 'rock'
-        if (computer >= 0.34 && computer < 0.67) return 'scissor'
-        return 'paper'
+    //     if (computer < 0.34) return 'rock'
+    //     if (computer >= 0.34 && computer < 0.67) return 'scissor'
+    //     return 'paper'
+    // }
+
+    getComputerChoice = () => {
+        const xhr = new XMLHttpRequest();
+        xhr.onload = function() {
+            comp.setComputerChoice(this.responseText)
+        }
+        
+        xhr.onerror = function() {
+            alert('Internal server error')
+        }
+        xhr.onload
+        xhr.open("GET", "http://localhost:5001/apis/compChoice");
+        xhr.send();
     }
 }
 
@@ -187,6 +208,7 @@ class Game {
 
         this.setStartResult(startResult)
         this.endResult(startResult)
+        comp.getComputerChoice()
     }
 
     getHistory = () => {
@@ -235,8 +257,7 @@ class Game {
                     <div class="card-body">
                         <h5 class="text-center text-uppercase" style="color: #f9b23e;">player choice = ${history.playerChoice}</h5>
                         <h5 class="text-center text-uppercase" style="color: #f9b23e;"> computer choice = ${history.computerChoice}</h5>
-                        <p style="font-size: -100pt; color: #724C21" >${history.id}</p>
-                        <h4 class="text-center text-uppercase" style="color: #f9b23e;"> result = ${history.result}</h4>
+                        <h4 class="text-center text-uppercase mt-5" style="color: #f9b23e;"> result = ${history.result}</h4>
                         <p class="text-center mt-3"><button id="${history.id}" type="button" class="btn btn-danger button-delete"
                         id="">Hapus</button></p>
                     </div>
@@ -259,6 +280,7 @@ const player = new PlayerHuman('jhon')
 const comp = new Comp('computer')
 const game = new Game(player,comp)
 game.getHistory()
+comp.getComputerChoice()
 
 const playerChoice = document.querySelectorAll('.player')
 playerChoice.forEach((choice) => {
